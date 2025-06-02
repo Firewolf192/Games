@@ -971,8 +971,6 @@ class Alien_invasion:
                             if ship_rect2.colliderect(upgrade_rect2):
 
                                 if self.choose == "ship_speed":
-                                 
-
                                     self.ship_speed += 0.5
 
                                 elif self.choose == "bullet_speed":
