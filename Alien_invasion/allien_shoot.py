@@ -13,30 +13,32 @@ class Laser:
         self.laser = pygame.image.load("alien/lahser.png")
         self.width = 5
         self.height = 150
+        self.x = random.randint(1000, 1800)
+        self.y = random.randint(0, 100)
         self.scale_laser = pygame.transform.scale(self.laser, (self.width, self.height))
         self.window = Screen()
         
         self.lahsers = []
 
-        self.las = {
+        self.las1 = {
             "image":self.scale_laser,
-            "x":random.randint(1000, 1800),
-            "y":random.randint(0, 100),
+            "x":self.x,
+            "y":self.y,
             "in_game":True,
             "speed":6
         }
 
         for _ in self.alien.alien_army:
-            self.lahsers.append(self.las)
+            self.lahsers.append(self.las1)
 
     
-
     def laser_move(self):
-        if self.las["y"] <= self.window.height + self.height:
-            self.las["y"] +=  self.las["speed"]
-            self.las["y"] = self.las["y"]
+        if self.las1["y"] <= self.window.height + self.height:
+            self.las1["y"] +=  self.las1["speed"]
+            self.las1["y"] = self.las1["y"]
         else:
-            self.__init__()
+            self.las1["x"] = random.randint(1000, 1800)
+            self.las1["y"] = random.randint(0, 100)
 
     
 

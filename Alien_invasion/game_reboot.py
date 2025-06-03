@@ -951,8 +951,7 @@ class Alien_invasion:
                                 else:
                                     self.ship_speed += 2
 
-                                
-
+                            
                                 self.choose = random.choice(self.upgrades)
 
                         else:
