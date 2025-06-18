@@ -20,7 +20,7 @@ class Alien_invasion:
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
 
         # ship
-        self.ship = pygame.image.load("alien/statek.png")
+        self.ship = pygame.image.load("assets/alien/statek.png")
         
         self.ship_x = 900
         self.ship_y = 1000
@@ -29,10 +29,10 @@ class Alien_invasion:
         self.ship_speed = 5
         self.scale_ship = pygame.transform.scale(self.ship, (self.ship_width, self.ship_height))
 
-        self.ship_left = pygame.image.load("alien/left.png")
+        self.ship_left = pygame.image.load("assets/alien/left.png")
         self.ship_left_scale = pygame.transform.scale(self.ship_left, (self.ship_width, self.ship_height))
 
-        self.ship_right = pygame.image.load("alien/right.png")
+        self.ship_right = pygame.image.load("assets/alien/right.png")
         self.ship_right_scale = pygame.transform.scale(self.ship_right, (self.ship_width, self.ship_height))
 
         self.left_active = False

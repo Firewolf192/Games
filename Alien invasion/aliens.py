@@ -3,7 +3,7 @@ from screen_settings import Screen
 
 class Aliens:
     def __init__(self):
-        self.image1 = pygame.image.load("alien/better_ship.png")
+        self.image1 = pygame.image.load("assets/alien/better_ship.png")
         self.width = 80
         self.height = 80
         self.speed1 = 2
@@ -13,7 +13,7 @@ class Aliens:
         
         self.screen = Screen()
 
-        self.image2 = pygame.image.load("alien/orange_ship.png")
+        self.image2 = pygame.image.load("assets/alien/orange_ship.png")
         self.width = 80
         self.height = 80
         self.speed2 = 2
@@ -21,7 +21,7 @@ class Aliens:
         self.y2 = 100
         self.scale_image2 = pygame.transform.scale(self.image2, (self.width, self.height))
 
-        self.image3 = pygame.image.load("alien/yellow_ship.png")
+        self.image3 = pygame.image.load("assets/alien/yellow_ship.png")
         self.width = 80
         self.height = 80
         self.speed3 = 2

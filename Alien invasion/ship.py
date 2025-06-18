@@ -5,9 +5,9 @@ from screen_settings import Screen
 class Ship:
     def __init__(self):
         pygame.init()
-        self.image = pygame.image.load("alien/statek.png")
-        self.image2 = pygame.image.load("alien/left.png")
-        self.image3 = pygame.image.load("alien/right.png")
+        self.image = pygame.image.load("assets/alien/statek.png")
+        self.image2 = pygame.image.load("assets/alien/left.png")
+        self.image3 = pygame.image.load("assets/alien/right.png")
 
         self.width = 80
         self.height = 80

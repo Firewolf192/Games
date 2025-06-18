@@ -6,13 +6,13 @@ class Upgrade:
     def __init__(self):
         pygame.init()
      
-        self.image = pygame.image.load("alien/rapidfire.png")
+        self.image = pygame.image.load("assets/alien/rapidfire.png")
         self.alien = Aliens()
         self.alien.spawn_first_wave()
         self.width = 50
         self.height = 50
 
-        self.upgrade_speed = 5
+        self.upgrade_speed = 2
         self.scale_image = pygame.transform.scale(self.image, (self.width, self.height))
         self.random_upg = random.sample(self.alien.alien_army, k = 2)
   
@@ -22,10 +22,13 @@ class Upgrade:
             window.blit(self.scale_image, (upgrade["x"], upgrade["y"]))
 
 
+
     def upgrade_move(self):
         for upgrade in self.random_upg:
-            upgrade["y"] += self.upgrade_speed
-            upgrade["y"] = upgrade["y"]
+            if self.alien.move["right"]:
+                upgrade["x"] += self.upgrade_speed
+
+
 
     
 

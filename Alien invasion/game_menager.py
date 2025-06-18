@@ -19,3 +19,4 @@ class GameManager:
         self.weapon2 = Laser()
         self.screen = Screen()
         self.upgrade = Upgrade()
+      

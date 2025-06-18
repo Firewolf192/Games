@@ -200,7 +200,10 @@ class Main:
                     self.status.alien.alien_army.clear()
                     self.status.alien.spawn_fourth_wave()
 
+
+
             self.status.upgrade.show_upgrade(self.window)
+            self.status.upgrade.upgrade_move()
             pygame.display.update()
             self.clock.tick(60)
 

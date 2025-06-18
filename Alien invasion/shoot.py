@@ -5,7 +5,7 @@ from aliens import Aliens
 class Bullet:
     def __init__(self):
         pygame.init()
-        self.image = pygame.image.load("alien/test.png")
+        self.image = pygame.image.load("assets/alien/test.png")
         self.width = 50
         self.height = 200
         self.scale_image = pygame.transform.scale(self.image, (self.width, self.height))
