@@ -20,8 +20,8 @@ class Bullet:
 
         self.normal_active = False
 
-        self.normal_fire = True
-        self.rapid_active = False
+        self.normal_fire = False
+        self.rapid_active = True
 
         self.bullets = []
 

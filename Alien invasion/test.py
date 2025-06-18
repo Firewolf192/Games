@@ -14,6 +14,7 @@ class Cointainer:
 
     options = len(menu)
 
+
 information = Cointainer()
 
 class Main:
@@ -32,6 +33,7 @@ Main.show_menu(information.menu)
 user_input = int(input("Wybierz opcję: "))
 if user_input == 1:
     Main.show_book(information.book)
+
 
 
 
