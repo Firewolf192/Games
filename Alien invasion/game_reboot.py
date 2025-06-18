@@ -17,7 +17,7 @@ class Alien_invasion:
         # screen
         self.screen_width = 1920
         self.screen_height = 1680
-        self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
+        self.screen = pygame.display.set_mode((self.screen_width, self.screen_height), pygame.FULLSCREEN)
 
         # ship
         self.ship = pygame.image.load("assets/alien/statek.png")
@@ -48,7 +48,7 @@ class Alien_invasion:
 
 
         # bullet
-        self.bullet = pygame.image.load("alien/test.png")
+        self.bullet = pygame.image.load("assets/alien/test.png")
         self.bullet_width = 50
         self.bullet_height = 200
         self.bullet_speed = 7
@@ -59,21 +59,21 @@ class Alien_invasion:
         self.rapid_fire = False
 
         # alien
-        self.alien = pygame.image.load("alien/better_ship.png")
+        self.alien = pygame.image.load("assets/alien/better_ship.png")
         self.alien_width = 80
         self.alien_height = 80
         self.scale_alien = pygame.transform.scale(self.alien, (self.alien_width, self.alien_height))
         self.alien_y = 100
         self.alien_x = 350
 
-        self.alien_orange = pygame.image.load("alien/orange_ship.png")
+        self.alien_orange = pygame.image.load("assets/alien/orange_ship.png")
         self.alien_width_orange = 80
         self.alien_height_orange = 80
         self.scale_alien_orange = pygame.transform.scale(self.alien_orange, (self.alien_width, self.alien_height))
         self.alien_y_orange = 200
         self.alien_x_orange = 350
 
-        self.alien_yellow = pygame.image.load("alien/yellow_ship.png")
+        self.alien_yellow = pygame.image.load("assets/alien/yellow_ship.png")
         self.alien_width_yellow = 80
         self.alien_height_yellow = 80
         self.scale_alien_yellow = pygame.transform.scale(self.alien_yellow, (self.alien_width, self.alien_height))
@@ -153,7 +153,7 @@ class Alien_invasion:
 
         # laser
 
-        self.laser_image = pygame.image.load("alien/lahser.png")
+        self.laser_image = pygame.image.load("assets/alien/lahser.png")
 
         self.laser_width = 5
         self.laser_height = 150
@@ -163,7 +163,7 @@ class Alien_invasion:
         self.game_over = False  
 
         # explotion-image
-        self.explode = pygame.image.load("alien/wybuch_2.png")
+        self.explode = pygame.image.load("assets/alien/wybuch_2.png")
         self.explode_width = 100
         self.explode_height = 100
         self.scale_explode = pygame.transform.scale(self.explode, (self.explode_width, self.explode_height))
@@ -234,11 +234,11 @@ class Alien_invasion:
         self.final_text = False
 
 
-        self.roar = pygame.mixer.Sound("sound/rour_of_boss.wav")
-        self.boss_fight = pygame.mixer.music.load("sound/boss_sound_fight.wav")
+        self.roar = pygame.mixer.Sound("assets/sound/rour_of_boss.wav")
+        self.boss_fight = pygame.mixer.music.load("assets/sound/boss_sound_fight.wav")
 
-        self.final_boss = pygame.image.load("alien/final_boss.png")
-        self.final_boss_red = pygame.image.load("alien/red.png")
+        self.final_boss = pygame.image.load("assets/alien/final_boss.png")
+        self.final_boss_red = pygame.image.load("assets/alien/red.png")
         self.final_boss_width = 500
         self.final_boss_height = 500
         self.final_boss_x = 700
@@ -273,7 +273,7 @@ class Alien_invasion:
 
         self.boss_dying = False
 
-        self.flame = pygame.image.load("alien/flame.png")
+        self.flame = pygame.image.load("assets/alien/flame.png")
         self.flame_x = None
         self.flame_y = None
         self.flame_width = 300
@@ -284,7 +284,7 @@ class Alien_invasion:
         self.flame_active = False
         self.flame_timer = 0
 
-        self.blaster = pygame.image.load("alien/blaster.png")
+        self.blaster = pygame.image.load("assets/alien/blaster.png")
         self.blaster_x = None
         self.blaster_y = None
         self.blaster_width = 100
@@ -306,7 +306,7 @@ class Alien_invasion:
 
         self.win = False
 
-        self.upgrade = pygame.image.load("alien/rapidfire.png")
+        self.upgrade = pygame.image.load("assets/alien/rapidfire.png")
         self.upgrade_width = 50
         self.upgrade_height = 50
         self.upgrade_x = None

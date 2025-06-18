@@ -8,7 +8,7 @@ class Laser:
         pygame.init()
         self.alien = Aliens()
 
-        self.alien.spawn_first_wave()
+        self.alien.spawn_first_wave(self.alien.x1, self.alien.y1, self.alien.speed1, self.alien.scale_image1)
      
         self.laser = pygame.image.load("assets/alien/lahser.png")
         self.width = 5

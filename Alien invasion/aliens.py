@@ -20,7 +20,6 @@ class Aliens:
         self.x2 = 150
         self.y2 = 100
         self.scale_image2 = pygame.transform.scale(self.image2, (self.width, self.height))
-
         self.image3 = pygame.image.load("assets/alien/yellow_ship.png")
         self.width = 80
         self.height = 80
@@ -42,41 +41,21 @@ class Aliens:
             "right":False
         }
 
-    def spawn_first_wave(self):
+    
+
+    def spawn_first_wave(self, x, y, speed, image):
         for _ in range(15):
-            self.x1 += 90
-            self.x1 = self.x1
+            x += 90
+            x = x
             self.alien_army.append({
-                "alien":self.scale_image1,
-                "x":self.x1,
-                "y":self.y1,
-                "speed":self.speed1,
+                "alien":image,
+                "x":x,
+                "y":y,
+                "speed":speed,
                 "alive":True
             })
 
-        for _ in range(15):
-            self.x2 += 90
-            self.x2 = self.x2
-            self.alien_army.append({
-                "alien":self.scale_image2,
-                "x":self.x2,
-                "y":self.y2,
-                "speed":self.speed2,
-                "alive":True
-            })
-
-        for _ in range(15):
-            self.x3 += 90
-            self.x3 = self.x3
-            self.alien_army.append({
-                "alien":self.scale_image3,
-                "x":self.x3,
-                "y":self.y3,
-                "speed":self.speed3,
-                "alive":True
-            })
-
-    def spawn_second_wave(self):
+    def spawn_second_wave(self, x, y, speed, image):
         self.x1 = 150
         self.y1 = 10
         self.x2 = 150
@@ -84,15 +63,15 @@ class Aliens:
         self.x3 = 1150
         self.y3 = 10
         
-        for _ in range(5):
-            self.y1 += 90
-            self.x1 = self.x1
-            self.y1 = self.y1
+        for _ in range(3):
+            y += 90
+            x = x
+            y = y
             self.alien_army.append({
-                "alien":self.scale_image1,
-                "x":self.x1,
-                "y":self.y1,
-                "speed":self.speed1,
+                "alien":image,
+                "x":x,
+                "y":y,
+                "speed":speed,
                 "alive":True
             })
 
@@ -107,15 +86,15 @@ class Aliens:
                 "alive":True
             })
 
-        for _ in range(5):
-            self.y3 += 90
-            self.y3 = self.y3
+        for _ in range(3):
+            y += 90
+            y = y
 
             self.alien_army.append({
-                "alien":self.scale_image3,
-                "x":self.x3,
-                "y":self.y3,
-                "speed":self.speed3,
+                "alien":image,
+                "x":x,
+                "y":y,
+                "speed":speed,
                 "alive":True
             })
  

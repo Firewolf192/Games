@@ -2,7 +2,6 @@ import pygame
 from game_menager import GameManager
 
 
-
 class Main:
     def __init__(self):
         pygame.init()
@@ -13,7 +12,9 @@ class Main:
         self.window = pygame.display.set_mode((self.status.screen.width, self.status.screen.height))
         self.clock = pygame.time.Clock()
 
-        self.status.alien.spawn_first_wave()
+        self.status.alien.spawn_first_wave(self.status.alien.x1, self.status.alien.y1, self.status.alien.speed1, self.status.alien.scale_image1)
+        self.status.alien.spawn_first_wave(self.status.alien.x2, self.status.alien.y2, self.status.alien.speed2, self.status.alien.scale_image2)
+        self.status.alien.spawn_first_wave(self.status.alien.x3, self.status.alien.y3, self.status.alien.speed3, self.status.alien.scale_image3)
 
         self.game_over = False
         
@@ -28,7 +29,9 @@ class Main:
         self.status.alien.y3 = 190
         self.status.ship.x = 850
         self.status.ship.y = 800
-        self.status.alien.spawn_first_wave()
+        self.status.alien.spawn_first_wave(self.status.alien.x1, self.status.alien.y1, self.status.alien.speed1, self.status.alien.scale_image1)
+        self.status.alien.spawn_first_wave(self.status.alien.x2, self.status.alien.y2, self.status.alien.speed2, self.status.alien.scale_image2)
+        self.status.alien.spawn_first_wave(self.status.alien.x3, self.status.alien.y3, self.status.alien.speed3, self.status.alien.scale_image3)
         self.status.ship.speed = 4
                                 
 
@@ -184,7 +187,8 @@ class Main:
                 if all(not alien["alive"] for alien in self.status.alien.alien_army[:]):
                     self.status.alien.alien_army.clear()
 
-                    self.status.alien.spawn_second_wave()
+                    self.status.alien.spawn_second_wave(self.status.alien.x1, self.status.alien.y1, self.status.alien.speed1, self.status.alien.scale_image1)
+                    self.status.alien.spawn_second_wave(self.status.alien.x3, self.status.alien.y3, self.status.alien.speed3, self.status.alien.scale_image3)
                     self.status.alien.wave1 = False
                     self.status.alien.wave2 = True
 
@@ -203,7 +207,7 @@ class Main:
 
 
             self.status.upgrade.show_upgrade(self.window)
-            self.status.upgrade.upgrade_move()
+            # self.status.upgrade.upgrade_move()
             pygame.display.update()
             self.clock.tick(60)
 
