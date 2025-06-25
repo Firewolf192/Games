@@ -2,7 +2,7 @@
 from ship import Ship
 from colors import Color
 from shoot import Bullet
-from sounds import SoundEfect
+from sounds import SoundEffect
 from aliens import Aliens
 from allien_shoot import Laser
 from screen_settings import Screen
@@ -13,10 +13,10 @@ class GameManager:
         self.ship = Ship()
         self.color = Color()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         self.bullet = Bullet()
-        self.sound = SoundEfect()
+        self.sound = SoundEffect()
         self.alien = Aliens()
         self.weapon = Laser()
         self.weapon2 = Laser()
         self.screen = Screen()
-        self.upgrade = Upgrade()
+        self.upgrade = Upgrade(self.alien)
       

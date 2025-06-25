@@ -1,6 +1,6 @@
 import pygame
 
-class SoundEfect:
+class SoundEffect:
     def __init__(self):
         pygame.init()
         pygame.mixer.init()
@@ -13,11 +13,7 @@ class SoundEfect:
         self.shoot = pygame.mixer.Sound("assets/sound/shoot.wav")
 
   
-      
-
-
-
-
+    
 
 
 

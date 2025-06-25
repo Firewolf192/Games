@@ -32,23 +32,22 @@ class Ship:
     def move_left(self):
         if self.x >= 0:
             self.x -= self.speed
-            self.x = self.x
+            
 
     def move_right(self):
         if self.x <= self.screen.width - self.width:
             self.x += self.speed
-            self.x = self.x
+         
 
     def move_up(self):
         if self.y >= 0:
             self.y -= self.speed
-            self.y = self.y
+          
 
     def move_down(self):
         if self.y <= self.screen.height - self.height:
             self.y += self.speed
-            self.y = self.y
-
+        
 
     def normal(self, screen):
         screen.blit(self.scale_image, (self.x, self.y))

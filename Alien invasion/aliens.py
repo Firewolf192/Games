@@ -1,5 +1,14 @@
 import pygame
 from screen_settings import Screen
+from typing import TypedDict
+
+
+class AlienProp(TypedDict):
+    alien: str
+    x: int
+    y: int
+    speed: int
+    alive: bool
 
 class Aliens:
     def __init__(self):
@@ -37,17 +46,18 @@ class Aliens:
         self.wave5 = False
         
         self.move = {
-            "left":True,
-            "right":False
+            "left":False,
+            "right":True
         }
 
-    
+    def addAlienArmyDict(self, dict: AlienProp):
+        self.alien_army.append(dict)
 
     def spawn_first_wave(self, x, y, speed, image):
         for _ in range(15):
             x += 90
             x = x
-            self.alien_army.append({
+            self.addAlienArmyDict({
                 "alien":image,
                 "x":x,
                 "y":y,
@@ -109,8 +119,6 @@ class Aliens:
         for _ in range(9):
             self.y1 += 70
             self.x1 += 70
-            self.x1 = self.x1
-            self.y1 = self.y1
             self.alien_army.append({
                 "alien":self.scale_image1,
                 "x":self.x1,
@@ -134,8 +142,6 @@ class Aliens:
             self.y3 += 70
             self.x3 -= 70
 
-            self.y3 = self.y3
-            self.x3 = self.x3
 
             self.alien_army.append({
                 "alien":self.scale_image3,
@@ -168,7 +174,7 @@ class Aliens:
 
         for _ in range(15):
             self.x2 += 90
-            self.x2 = self.x2
+    
 
             self.alien_army.append({
                 "alien":self.scale_image2,
@@ -180,7 +186,7 @@ class Aliens:
 
         for _ in range(15):
             self.x3 += 90
-            self.x3 = self.x3
+       
 
             self.alien_army.append({
                 "alien":self.scale_image3,
@@ -212,17 +218,3 @@ class Aliens:
             elif self.move["right"]:
                 alien["x"] += alien["speed"]
 
-
-
-    
-
-    
-
-                
-
-                    
-        
-
-        
-            
-          
