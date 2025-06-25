@@ -10,7 +10,7 @@ class Laser:
 
         self.alien.spawn_first_wave(self.alien.x1, self.alien.y1, self.alien.speed1, self.alien.scale_image1)
      
-        self.laser = pygame.image.load("assets/alien/lahser.png")
+        self.laser = pygame.image.load("assets/alien/ldsewdwahser.png")
         self.width = 5
         self.height = 150
         self.x = random.randint(1000, 1800)

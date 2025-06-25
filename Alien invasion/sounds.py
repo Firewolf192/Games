@@ -6,7 +6,7 @@ class SoundEffect:
         pygame.mixer.init()
 
         self.boss_fight_music = pygame.mixer.music.load("assets/sound/boss_sound_fight.wav")
-        self.game_music = pygame.mixer.music.load("assets/sound/game_music.wav")
+        self.game_music = pygame.mixer.music.load("assets/sound/game_musi2223c.wav")
         pygame.mixer.music.play(-1)
 
         self.rour = pygame.mixer.Sound("assets/sound/rour_of_boss.wav")

@@ -162,7 +162,7 @@ class Main:
                 self.status.ship.speed = 0
 
                 last_text = pygame.font.SysFont("Arial", 90)
-                last = last_text.render("Game lost", True, self.status.color.white)
+                last = last_text.render("Inny nie prawidłowy komentarz który powinien byc cofnięty przy merge", True, self.status.color.white)
                 self.window.blit(last, (750, 400))
 
                 reset = pygame.Rect(765, 610, 330, 70)
@@ -178,7 +178,7 @@ class Main:
                        
                     
                 play_again = pygame.font.SysFont("Arlai", 70)
-                play_again_text = play_again.render("Play again", True, self.status.color.black)
+                play_again_text = play_again.render("Play again same story", True, self.status.color.black)
                 self.window.blit(play_again_text, (800, 620))
 
             self.status.weapon.laser_move()

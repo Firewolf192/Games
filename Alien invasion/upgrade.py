@@ -6,7 +6,7 @@ class Upgrade:
     def __init__(self, alienInstance: Aliens):
         pygame.init()
      
-        self.image = pygame.image.load("assets/alien/rapidfire.png")
+        self.image = pygame.image.load("assets/alien/rapid121fire.png")
         self.alien = alienInstance
         
         self.alien.spawn_first_wave(self.alien.x1, self.alien.y1, self.alien.speed1, self.alien.scale_image1)
